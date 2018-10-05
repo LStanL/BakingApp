@@ -1,4 +1,4 @@
-package com.example.andreistasevici.bakingapp;
+package com.example.andreistasevici.bakingapp.models;
 
 /**
  * Created by andreistasevici on 9/30/18.
