@@ -9,8 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.andreistasevici.bakingapp.R;
+import com.example.andreistasevici.bakingapp.models.Recipe;
 
-import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Created by andreistasevici on 9/30/18.
@@ -18,9 +19,7 @@ import java.util.List;
 
 public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.RecipeViewHolder> {
 
-    // using list of integeres until implementing Recipe class
-    // private List<Recipe> recipes;
-    private List<String> recipes;
+    private ArrayList<Recipe> recipes;
 
     //internal class for custom ViewHolder
     public class RecipeViewHolder extends RecyclerView.ViewHolder {
@@ -37,7 +36,7 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.RecipeVi
     }
 
     //adapter constructor
-    public RecipesAdapter(List<String> recipes) {
+    public RecipesAdapter(ArrayList<Recipe> recipes) {
         this.recipes = recipes;
     }
 
@@ -58,6 +57,6 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.RecipeVi
 
     @Override
     public void onBindViewHolder(@NonNull RecipeViewHolder holder, int position) {
-        holder.recipeName.setText(recipes.get(position));
+        holder.recipeName.setText(recipes.get(position).getName());
     }
 }
